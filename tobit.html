@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>Tobit Model</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
+</head>
+<body>
+<div id="header">
+<h1 class="title">Tobit Model</h1>
+</div>
+<p>1.Censoring and Truncation</p>
+<p>1-1. Censoring * Some data on only dependent variables are lost. (Not regressors) * When we study the expenditures of durable goods for all households. In this case, we can observe the positive expenditures and &quot;zero&quot; expenditure if the dependent variable is the negative.</p>
+<ul>
+<li>Censored MLE <span class="math">\[f(y|x)=\left\{ \begin{array}{c}
+f^{*}(y|x)\qquad if\, y&gt;L\\
+F^{*}(L|x)\qquad if\, y=L
+\end{array}\right\}\]</span></li>
+</ul>
+<p><span class="math">\(y^{*}\)</span> denote latent variable. L denotes left censored.</p>
+<ol style="list-style-type: lower-roman">
+<li>y &gt; L: the densensity is the same as the density of <span class="math">\(y^{*}\)</span></li>
+<li>y = L: this is the same the probability of observing <span class="math">\(y^{*}\leq L\)</span>, or <span class="math">\(F^{*}(L|x)\)</span></li>
+</ol>
+<p>1-2. Truncation * Some observations on both dependent variables and regressors are lost. * When we study the expenditures of durable goods, we consider only low income households.</p>
+<ul>
+<li>Truncated MLE When y &lt; L, x is supressed. The conditional density of the observed y :</li>
+</ul>
+<p><span class="math">\[f(y)=f^{*}(y|y&gt;L)
+    =f^{*}(y)/Pr[y|y&gt;L)
+    =f^(*)(y)/[1-F^{*}(L)]\]</span></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Tobit Model</li>
+</ol>
+<p>2-1 The traditional tobit model can be applied only on homogenous and normal distribution.</p>
+<ul>
+<li>Normally distributed error, positive outcomes are observed.</li>
+</ul>
+<p><span class="math">\[y^{*}=x^{&#39;}\beta\]</span></p>
+<p>2-2 Type 2 Tobit Model (A bivariate sample selection model,Tobit model with stochastic threshold: Nelson,1977)</p>
+<p>2-3 Type 5 Tobit Model (Switching Regression Model with endogenous switching: Amemiya,1985,p.399)</p>
+<p>2-4 Bayesian Tobit Model (flexible parametric approach) use MCMC</p>
+<p>2-5 Semiparametric approach</p>
+<ul>
+<li>Powell(2001)</li>
+<li>Das, Newey, and Vella(2001) Propensity score</li>
+</ul>
+<p>2-6 Nonparametric approach</p>
+<ul>
+<li>We can't assume the distribution.</li>
+<li></li>
+</ul>
+</body>
+</html>
