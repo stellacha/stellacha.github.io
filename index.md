@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 ---
 
 Thank you for your interest in my website.
